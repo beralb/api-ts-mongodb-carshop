@@ -18,6 +18,23 @@ class CarService {
     const newCar = await carODM.create(car);
     return this.createCarDomain(newCar);
   }
+
+  public async getAllCars() {
+    const carODM = new CarODM();
+    const cars = await carODM.find();
+    const carsArray = cars.map((car) =>
+      this.createCarDomain(car));
+    return carsArray;
+  }
+
+  public async getById(id: string) {
+    // console.log('🚀 ~ file: CarService.ts:31 ~ CarService ~ getById ~ id', id);
+    const carODM = new CarODM();
+    const foundCar = await carODM
+      .findById(id);
+    console.log("🚀 ~ file: CarService.ts:35 ~ CarService ~ getById ~ foundCar", foundCar)
+    return foundCar;
+  }
 }
 
 export default CarService;
