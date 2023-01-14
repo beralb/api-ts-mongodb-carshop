@@ -31,9 +31,8 @@ class CarODM {
     return this.model.find();
   }
 
-  public async findById(id: string): Promise<ICar[]> {
-    console.log('🚀 ~ file: CarODM.ts:35 ~ CarODM ~ findById ~ id', id);
-    return this.model.find({ id });
+  public async findById(id: string): Promise<ICar> {   
+    return this.model.findOne({ _id: id }).select({ __v: 0 }).lean();
   }
 }
 

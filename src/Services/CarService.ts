@@ -28,11 +28,9 @@ class CarService {
   }
 
   public async getById(id: string) {
-    // console.log('🚀 ~ file: CarService.ts:31 ~ CarService ~ getById ~ id', id);
     const carODM = new CarODM();
     const foundCar = await carODM
-      .findById(id);
-    console.log("🚀 ~ file: CarService.ts:35 ~ CarService ~ getById ~ foundCar", foundCar)
+      .findById(id);    
     return foundCar;
   }
 }
