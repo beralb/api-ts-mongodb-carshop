@@ -1,32 +1,21 @@
-import CarStatus from '../../utils/CarStatus';
-
-interface CarParameters {
-  id: string | undefined;
-  model: string;
-  year: number;
-  color: string;
-  status?: CarStatus;
-  buyValue: number;
-  doorsQty: number;
-  seatsQty: number;
-}
+import ICar from '../Interfaces/ICar';
 
 class Car {
-  private id: string | undefined;
-  private model: string;
-  private year: number;
-  private color: string;
-  private status?: CarStatus;
-  private buyValue: number;
+  protected id: string | undefined;
+  protected model: string;
+  protected year: number;
+  protected color: string;
+  protected status?: boolean;
+  protected buyValue: number;
   private doorsQty: number;
   private seatsQty: number;
 
-  constructor(carParameters: CarParameters) {
+  constructor(carParameters: ICar) {
     this.id = carParameters.id;
     this.model = carParameters.model;
     this.year = carParameters.year;
     this.color = carParameters.color;
-    this.status = carParameters.status;
+    this.status = false;
     this.buyValue = carParameters.buyValue;
     this.doorsQty = carParameters.doorsQty;
     this.seatsQty = carParameters.seatsQty;
@@ -56,13 +45,10 @@ class Car {
   public getColor() {
     return this.color;
   }
-  public setStatus(status: CarStatus | undefined) {
-    if (!status) {
-      this.status = 0;
-    }
+  public setStatus(status: boolean | undefined) {
     this.status = status;
   }
-  public getStatus(): CarStatus | undefined {
+  public getStatus(): boolean | undefined {
     return this.status;
   }
   public setBuyValue(buyValue: number) {
