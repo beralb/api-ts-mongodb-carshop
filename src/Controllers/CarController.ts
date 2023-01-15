@@ -52,9 +52,7 @@ class CarController {
         return this.res.status(404).json({ message: 'Car not found' });
       }
 
-      const { _id: foundId, ...car } = foundCar;
-      const carWithId = { id: foundId, ...car };
-      return this.res.status(200).json(carWithId);
+      return this.res.status(200).json({ id, ...foundCar });
     } catch (error) {
       this.next(error);
     }
@@ -68,7 +66,7 @@ class CarController {
       }
 
       const foundCar = await this.service.getById(id);
-      if (!foundCar) {
+      if (!foundCar || foundCar === null) {
         return this.res.status(404).json({ message: 'Car not found' });
       }
 

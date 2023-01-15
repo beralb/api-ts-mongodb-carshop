@@ -1,7 +1,5 @@
 import Car from '../Domains/Car';
-
 import ICar from '../Interfaces/ICar';
-
 import CarODM from '../Models/CarODM';
 
 class CarService {
@@ -30,16 +28,15 @@ class CarService {
   public async getById(id: string) {
     const carODM = new CarODM();
     const foundCar = await carODM
-      .findById(id);    
+      .findById(id);
     return foundCar;
   }
 
   public async update(id: string, car: ICar) {
     const carODM = new CarODM();
     const updatedCar = await carODM.update(id, car);
-    updatedCar.id = id;
     return this.createCarDomain(updatedCar);
-  }  
+  }
 }
 
 export default CarService;
