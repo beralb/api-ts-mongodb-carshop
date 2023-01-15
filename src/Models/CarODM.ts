@@ -31,8 +31,12 @@ class CarODM {
     return this.model.find();
   }
 
-  public async findById(id: string): Promise<ICar> {   
+  public async findById(id: string): Promise<ICar> {
     return this.model.findOne({ _id: id }).select({ __v: 0 }).lean();
+  }
+
+  public async update(id: string, car: ICar): Promise<ICar> {
+    return this.model.findOneAndUpdate({ _id: id }, car, { new: true }).select({ __v: 0 }).lean();
   }
 }
 
