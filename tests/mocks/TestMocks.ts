@@ -66,4 +66,4 @@ const mockMotorcyclesArray = [
   },
 ];
 
-export { mockCar, mockCarsArray,mockMotorcycle, mockMotorcyclesArray };
+export { mockCar, mockCarsArray, mockMotorcycle, mockMotorcyclesArray };
