@@ -52,7 +52,7 @@ class CarController {
         return this.res.status(404).json({ message: 'Car not found' });
       }
 
-      return this.res.status(200).json({ id, ...foundCar });
+      return this.res.status(200).json({ ...foundCar, id });
     } catch (error) {
       this.next(error);
     }

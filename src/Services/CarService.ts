@@ -27,9 +27,8 @@ class CarService {
 
   public async getById(id: string) {
     const carODM = new CarODM();
-    const foundCar = await carODM
-      .findById(id);
-    return foundCar;
+    const foundCar = await carODM.findCarById(id);
+    return this.createCarDomain(foundCar);
   }
 
   public async update(id: string, car: ICar) {
