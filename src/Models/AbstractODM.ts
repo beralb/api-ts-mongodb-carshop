@@ -26,12 +26,7 @@ abstract class AbstractODM<T> {
     return this.model.find();
   }
 
-  // public async findById(id: string): Promise<T> {
-  //   return this.model.findOne({ _id: id }).select({ __v: 0 }).lean();
-  // }
-
   public async findCarById(id: string): Promise<T | null> {
-    // return this.model.findById({ _id: id }).select({ __v: 0 }).lean();
     return this.model.findOne({ _id: id }, { __v: 0 });
   }
 

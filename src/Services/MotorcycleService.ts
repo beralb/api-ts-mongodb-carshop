@@ -28,7 +28,6 @@ class MotorcycleService {
   public async getById(id: string) {
     const motorcycleODM = new MotorcycleODM();
     const foundMotorcycle = await motorcycleODM
-      // .findById(id);
       .findCarById(id);
     return this.createMotorcycleDomain(foundMotorcycle);
   }
