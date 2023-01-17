@@ -1,10 +1,9 @@
-<h1 align="center">TypeScript Project - Car Shop</h1>
+<h1 align="left">TypeScript Project - Car Shop</h1>
+</br>
 
-🔭 In this project, I applied the #SOLID architecture principles and the #OOP (Object Oriented Programming) principles in a football championship board.
+For this project, I applied Object Oriented Programming (OOP) principles to build a CRUD API to manage a car/bikes dealership. This will be done using the MongoDB database through the Mongoose framework.
 
-For this project, you will apply Object Oriented Programming (OOP) principles to build a CRUD API to manage a car dealership. This will be done using the MongoDB database through the Mongoose framework.
-
-I built a dockerized back-end using data modeling through Mongoose queries toa Mongo database. The development respected the business rules provided in the project and the API is capable of being consumed by any Rest API Client.
+I built a dockerized back-end using data modeling through Mongoose queries to a Mongo database. The development respected the business rules provided in the project and the API is capable of being consumed by an already Rest API Client.
 
 In this project, I also implemented the concepts of TDD, SOLID in addition to the organization of the project in MSC layers.
 
