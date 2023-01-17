@@ -4,7 +4,7 @@
 
 For this project, you will apply Object Oriented Programming (OOP) principles to build a CRUD API to manage a car dealership. This will be done using the MongoDB database through the Mongoose framework.
 
-I built a dockerized back-end using data modeling through Mongoose queries toa Mongo database. The development respected the business rules provided in the project and the API is capable of being consumed by an already provided front-end.
+I built a dockerized back-end using data modeling through Mongoose queries toa Mongo database. The development respected the business rules provided in the project and the API is capable of being consumed by any Rest API Client.
 
 In this project, I also implemented the concepts of TDD, SOLID in addition to the organization of the project in MSC layers.
 
